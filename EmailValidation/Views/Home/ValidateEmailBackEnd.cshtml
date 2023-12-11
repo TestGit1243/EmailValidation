@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+
+<div class="row">
+    <h2>Validate Email Csharp </h2>
+</div>
+<div class="row">
+    <form method="post" id="EmailValidation" action="/Home/ValidateEmailBackEnd">
+        <input type="text" name="email" id="email" class="form-control">
+        <input type="submit" name="submit" value="Validate" class="btn btn-success">
+    </form>
+    @if (@ViewBag.status == "True")
+    {
+        <h3 style="color:green">@ViewBag.Message</h3> }
+    else
+    {
+        <h3 style="color:red">@ViewBag.Message</h3>
+    }
+
+
+</div>
